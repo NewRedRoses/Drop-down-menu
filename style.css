@@ -4,3 +4,16 @@ body {
 .menu-items ul {
   list-style-type: none;
 }
+.drop-down-container {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+.menu-container {
+  visibility: hidden;
+}
+.menu-container.visible {
+  visibility: visible;
+  border: 1px solid black;
+  background-color: aliceblue;
+}
