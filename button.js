@@ -1,11 +1,11 @@
-function dropDownMenu(clickedBtnID, menuToDisplay) {
+function dropDownMenuToggle(clickedBtnID, menuToDisplayClass) {
   /* 
     When user clicks btn -> display the contents of the menu item
     */
-  // Eventually i want to use the argument instead
-  const btn = document.getElementById("drop-down-btn");
+  const btn = document.getElementById(clickedBtnID);
   btn.addEventListener("click", () => {
-    console.log("clicked btn");
+    const menu = document.querySelector("." + menuToDisplayClass);
+    menu.classList.toggle("visible");
   });
 }
-dropDownMenu();
+dropDownMenuToggle("drop-down-btn", "menu-container");
